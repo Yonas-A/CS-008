@@ -9,7 +9,7 @@
 using namespace std;
 
 /// \note there is no Iterator for Multimap class
-///       with BTree private memeber variable
+///       with BTree private member variable
 
 template < typename K, typename V >
 class MMap

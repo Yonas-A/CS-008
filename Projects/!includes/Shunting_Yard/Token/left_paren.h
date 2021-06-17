@@ -1,17 +1,14 @@
 #ifndef LEFT_PAREN_H
 #define LEFT_PAREN_H
 
-#include <iostream>
-
 #include <string.h>
+
+#include <iostream>
 
 #include "../../!includes/Shunting_Yard/Token/token.h"
 
-
-class Left_Paren: public ShuntingYardTokens::Token
-{
-public:
-
+class Left_Paren : public ShuntingYardTokens::Token {
+   public:
     // ========================= ctor's ========================
 
     ////////////////////////////////////////////////////////////
@@ -20,9 +17,7 @@ public:
     /// \param string assigned to member variable _l_parentheis
     ///
     ////////////////////////////////////////////////////////////
-    Left_Paren( std::string str );
-
-
+    Left_Paren(std::string str);
 
     // ======================== accessors =======================
 
@@ -32,7 +27,7 @@ public:
     /// \return Left Parenthesis as a string
     ///
     ////////////////////////////////////////////////////////////
-    std::string get_Left_Paren( );
+    std::string get_Left_Paren();
 
     ////////////////////////////////////////////////////////////
     /// \brief Get Left Parenthesis' token type
@@ -41,9 +36,7 @@ public:
     ///         a TokenType of left Parenthesis
     ///
     ////////////////////////////////////////////////////////////
-    virtual ShuntingYardTokens::TokenType get_type( ) override;
-
-
+    virtual ShuntingYardTokens::TokenType get_type() override;
 
     // ======================== display =======================
 
@@ -51,14 +44,11 @@ public:
     /// \brief print Left Parenthesis onto the console
     ///
     ////////////////////////////////////////////////////////////
-    virtual void print ( ) override;
+    virtual void print() override;
 
-
-private:
-
+   private:
     /// a string that'll hold left parenthesis
     std::string _l_parenthesis;
-
 };
 
-#endif // LEFT_PAREN_H
+#endif  // LEFT_PAREN_H

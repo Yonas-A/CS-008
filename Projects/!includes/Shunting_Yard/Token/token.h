@@ -7,26 +7,24 @@
 /// Shy_tk
 /// Sto_tk
 
+namespace ShuntingYardTokens {
 
-namespace ShuntingYardTokens
-{
+enum class TokenType : int { words = 0,
+                             numbers = 1,
+                             variables = 2,
+                             operators = 3,
+                             lparenthesis = 4,
+                             rparenthesis = 5 };
 
-
-enum class TokenType:int { words = 0, numbers = 1, variables = 2, operators = 3,
-                           lparenthesis = 4, rparenthesis = 5 };
-
-class Token
-{
-
-public:
-
+class Token {
+   public:
     // =======================  ctor's  ========================
 
     ////////////////////////////////////////////////////////////
     /// \brief default Construct creates an empty token
     ///
     ////////////////////////////////////////////////////////////
-    Token( );
+    Token();
 
     ////////////////////////////////////////////////////////////
     /// \brief Construct Token from a type string
@@ -34,9 +32,7 @@ public:
     /// \param string assigned to member variable _input
     ///
     ////////////////////////////////////////////////////////////
-    Token( const std::string& str );
-
-
+    Token(const std::string& str);
 
     // ======================= accessors =======================
 
@@ -46,7 +42,7 @@ public:
     /// \return a string representing Token
     ///
     ////////////////////////////////////////////////////////////
-    std::string get_token( );
+    std::string get_token();
 
     ////////////////////////////////////////////////////////////
     /// \brief Get the Token's token
@@ -55,8 +51,7 @@ public:
     ///         a TokenType of Number
     ///
     ////////////////////////////////////////////////////////////
-    virtual ShuntingYardTokens::TokenType get_type( );
-
+    virtual ShuntingYardTokens::TokenType get_type();
 
     ////////////////////////////////////////////////////////////
     /// \brief remove quotations marks around string str
@@ -65,9 +60,7 @@ public:
     ///         around it
     ///
     ////////////////////////////////////////////////////////////
-    std::string remove_quotations( const std::string& str );
-
-
+    std::string remove_quotations(const std::string& str);
 
     // ======================= display =========================
 
@@ -75,27 +68,20 @@ public:
     /// \brief print Token onto the console
     ///
     ////////////////////////////////////////////////////////////
-    virtual void print( ) ;
+    virtual void print();
 
     ////////////////////////////////////////////////////////////
     /// \brief write to screen Token p's Token
     ///
     ////////////////////////////////////////////////////////////
-    friend std::ostream& operator <<( std::ostream& outs,
-                                 ShuntingYardTokens::Token* n_ptr);
+    friend std::ostream& operator<<(std::ostream& outs,
+                                    ShuntingYardTokens::Token* n_ptr);
 
-
-private:
-
+   private:
     /// a string that'll hold Token
     std::string _input;
-
 };
 
+}  // namespace ShuntingYardTokens
 
-
-}
-
-
-
-#endif // SHUNTING_YARD_TOKENS_H
+#endif  // SHUNTING_YARD_TOKENS_H

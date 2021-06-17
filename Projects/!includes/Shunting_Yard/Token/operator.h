@@ -4,16 +4,13 @@
 #include <iostream>
 #include <string>
 
-#include "../../!includes/Shunting_Yard/Token/token.h"
 #include "../../!includes/Map/BPlus_Tree/map.h"
+#include "../../!includes/Shunting_Yard/Token/token.h"
 
-using namespace  std;
+using namespace std;
 
-class Operator: public ShuntingYardTokens::Token
-{
-public:
-
-
+class Operator : public ShuntingYardTokens::Token {
+   public:
     // ========================= ctor's ========================
 
     ////////////////////////////////////////////////////////////
@@ -22,9 +19,7 @@ public:
     /// \param string  assigned to the member variable _operator
     ///
     ////////////////////////////////////////////////////////////
-    Operator( std::string str );
-
-
+    Operator(std::string str);
 
     // ======================== accessors =======================
 
@@ -34,7 +29,7 @@ public:
     /// \return operator as a string
     ///
     ////////////////////////////////////////////////////////////
-     std::string get_operator( );
+    std::string get_operator();
 
     ////////////////////////////////////////////////////////////
     /// \brief get the operator's precedence
@@ -46,7 +41,7 @@ public:
     /// \return an int identifying the current operators precedence
     ///
     ////////////////////////////////////////////////////////////
-    int get_precedence( ) const;
+    int get_precedence() const;
 
     ////////////////////////////////////////////////////////////
     /// \brief get operator's token type
@@ -55,9 +50,7 @@ public:
     /// a TokenType of operators
     ///
     ////////////////////////////////////////////////////////////
-    virtual ShuntingYardTokens::TokenType get_type( ) override;
-
-
+    virtual ShuntingYardTokens::TokenType get_type() override;
 
     // ======================== display =======================
 
@@ -65,17 +58,14 @@ public:
     /// \brief print operator onto the console
     ///
     ////////////////////////////////////////////////////////////
-    virtual void print( ) override ;
+    virtual void print() override;
 
-private:
-
+   private:
     /// String to hold current operator
-     std::string _operator;
+    std::string _operator;
 
     /// map to hold precedence for different operators
-    Map < std::string, int > _precedence;
-
-
+    Map<std::string, int> _precedence;
 
     // ======================== modifiers =======================
 
@@ -85,9 +75,7 @@ private:
     ///        such as +, - , * ,etc ...
     ///
     ////////////////////////////////////////////////////////////
-    void assign_precedence( );
-
-
+    void assign_precedence();
 };
 
-#endif // OPERATOR_H
+#endif  // OPERATOR_H

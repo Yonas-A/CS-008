@@ -6,22 +6,26 @@
 
 using namespace std;
 
-
 const int CMD_COL = 40;
 const int CMD_ROW = 50;
 
-enum class states:int { success = 1, fail = 0, start = -1 };
+enum class states : int { success = 1,
+                          fail = 0,
+                          start = -1 };
 
-
-struct cmd_range
-{
+/**
+ * @brief  tells us what our starting and ending characters are based on ascii values
+ * \example cmd_range { '0', '9' } means the range will go from '0' through '9'
+ */
+struct cmd_range {
     /**
-     * @brief  this'll tell us the starting and ending characters
-     *         based on ascii values
-     *         \example cmd_range { '0', '9' } means the cmd_range
-     *          will go from 0 , 1, 3, all the way thru 9
+     * @brief cmd_range::start the starting character for the range
      */
     const char start;
+
+    /**
+     * @brief range::start the starting character for the range
+     */
     const char end;
 };
 
@@ -29,7 +33,7 @@ struct cmd_range
 // initializer
 // =======================================================================
 
-void initialize_cmd( int table[][CMD_COL], int row, int col ) ;
+void initialize_cmd(int table[][CMD_COL], int row, int col);
 /**
  * @pre takes a 2d integer array, two integers that will be used to initialize
  *          the array
@@ -40,7 +44,7 @@ void initialize_cmd( int table[][CMD_COL], int row, int col ) ;
 // state markers
 // =======================================================================
 
-void mark_cells( int table[][CMD_COL], int row, cmd_range r, int state );
+void mark_cells(int table[][CMD_COL], int row, cmd_range r, int state);
 /**
  * @pre \param  a 2d integer array, an integer index value, a character
  *              range and an const int to mark table with
@@ -49,7 +53,7 @@ void mark_cells( int table[][CMD_COL], int row, cmd_range r, int state );
  *              table[row][ start range  thru end range ] = state
  */
 
-void mark_cells(int table[][CMD_COL], int row, char columns[], int state );
+void mark_cells(int table[][CMD_COL], int row, char columns[], int state);
 /**
  * @pre \param  a 2d integer array, an integer index value, a character
  *              array and a const integer to mark table with
@@ -61,7 +65,7 @@ void mark_cells(int table[][CMD_COL], int row, char columns[], int state );
 // success and fail state setters
 // =======================================================================
 
-void set_success(int table[][CMD_COL], unsigned int row );
+void set_success(int table[][CMD_COL], unsigned int row);
 /**
  * @pre  \param a 2d integer array, and an integer index value
  * @post array at column 0 and this row ( table[0][row] ) are set to 1
@@ -69,7 +73,7 @@ void set_success(int table[][CMD_COL], unsigned int row );
  *          that we are currently at a success state
  */
 
-void set_fail(int table[ ][ CMD_COL ], int row );
+void set_fail(int table[][CMD_COL], int row);
 /**
  * @pre takes a 2d integer array, and an integer index value for the array
  * @post array at column 0 and this row ( table[0][row] ) are set to 0
@@ -82,7 +86,7 @@ void set_fail(int table[ ][ CMD_COL ], int row );
 //  a master function for table: sets successes, fails, and all other states
 // =======================================================================
 
-void fill_table( int table[ ][ CMD_COL ] );
+void fill_table(int table[][CMD_COL]);
 /**
  * @pre takes a 2d integer array,
  * @post array at different columns and rows are set to a value that
@@ -98,46 +102,46 @@ void fill_table( int table[ ][ CMD_COL ] );
 // modifiers for each state
 // ==================================================================
 
-void fill_create_machine(  int table[ ][ CMD_COL] );
+void fill_create_machine(int table[][CMD_COL]);
 /**
  * @pre takes a 2d integer array,
  * @post array for the create machine is initailzed based on a state
  *       decided according to the diagram in cmd_line.pdf
  */
-void fill_delete_machine( int table[ ][ CMD_COL ] );
+void fill_delete_machine(int table[][CMD_COL]);
 /**
  * @pre takes a 2d integer array,
  * @post array for the delete machine is initailzed based on
  *       a state decided according to the diagram in cmd_line.pdf
  */
 
-void fill_drop_machine(  int table[ ][ CMD_COL] );
+void fill_drop_machine(int table[][CMD_COL]);
 /**
  * @pre takes a 2d integer array,
  * @post array for the drop machine is initailzed based on
  *       a state decided according to the diagram in cmd_line.pdf
  */
 
-void fill_make_machine(  int table[ ][ CMD_COL] );
+void fill_make_machine(int table[][CMD_COL]);
 /**
  * @pre takes a 2d integer array,
  * @post array for the make machine is initailzed based on
  *       a state decided according to the diagram in cmd_line.pdf
  */
 
-void fill_select_machine( int table[ ][ CMD_COL] );
+void fill_select_machine(int table[][CMD_COL]);
 /**
  * @pre takes a 2d integer array,
  * @post array for the select machine is initailzed based on a state
  *       decided according to the diagram in cmd_line.pdf
  */
-void fill_insert_machine( int table[ ][ CMD_COL] );
+void fill_insert_machine(int table[][CMD_COL]);
 /**
  * @pre takes a 2d integer array,
  * @post array for the insert machine is initailzed based on a state
  *       decided according to the diagram in cmd_line.pdf
  */
-void fill_make_machine( int table[ ][ CMD_COL] );
+void fill_make_machine(int table[][CMD_COL]);
 /**
  * @pre takes a 2d integer array,
  * @post array for the insert machine is initailzed based on a state
@@ -148,7 +152,7 @@ void fill_make_machine( int table[ ][ CMD_COL] );
 // display functions
 // ==================================================================
 
-void print_cmd( const int table[][CMD_COL], int row, int col);
+void print_cmd(const int table[][CMD_COL], int row, int col);
 /**
  * @pre \param a 2d integer array, and two integers used for index
  *              values to end
@@ -156,7 +160,7 @@ void print_cmd( const int table[][CMD_COL], int row, int col);
  *              displayed on the screen
  */
 
-void show_string( char s[], unsigned int pos);
+void show_string(char s[], unsigned int pos);
 /**
  * @pre takes a character array and an integer that will tell us what posion
  *      we currently are
@@ -166,4 +170,4 @@ void show_string( char s[], unsigned int pos);
  *                        ^
  */
 
-#endif // COMMAND_LINE_TABLE_H
+#endif  // COMMAND_LINE_TABLE_H

@@ -1,0 +1,1493 @@
+
+--------------  SQL Tables I Manage: -------------- 
+
+--------------------------------------------------
+=  =   =   =   =  BATCH TEST  =  =   =   =   =
+
+//****************************************************************************
+
+//		CREATE TABLES AND INSERT RECORDS
+
+//****************************************************************************
+
+
+
+
+
+[0]  make table employee fields  last, 		first, 			dep,  		salary, 	year
+SQL: make: done:: 
+
+
+[1]  insert into employee values Blow, 		Joe, 			CS,		 100000, 	2018
+SQL: insert: done:: 
+
+
+[2]  insert into employee values Blow, 		JoAnn,			Physics, 	200000, 	2016
+SQL: insert: done:: 
+
+
+[3]  insert into employee values Johnson, 	Jack, 			HR, 		150000, 	2014
+SQL: insert: done:: 
+
+
+[4]  insert into employee values Johnson, 	"Jimmy", 		Chemistry,	140000, 	2018
+SQL: insert: done:: 
+
+
+[5]  insert into employee values Yao,	 	Jimmy, 			Math,		145000, 	2014
+SQL: insert: done:: 
+
+
+[6]  insert into employee values "Yao", 	Flo, 			CS,		147000, 	2012
+SQL: insert: done:: 
+
+
+[7]  insert into employee values Yang, 		Bo, 			CS,		160000, 	2013
+SQL: insert: done:: 
+
+
+[8]  insert into employee values Jackson,	"Flo", 			Math,		165000, 	2017
+SQL: insert: done:: 
+
+
+[9]  insert into employee values Jackson,	Bo,	 		Chemistry,	130000, 	2011
+SQL: insert: done:: 
+
+
+[10]  insert into employee values "Jackson",	Billy, 			Math,	 	170000, 	2017
+SQL: insert: done:: 
+
+
+[11]  insert into employee values Johnson,	"Mary Ann", 		Math,		165000, 	2014
+SQL: insert: done:: 
+
+
+[12]  insert into employee values Johnson,	"Billy Bob", 		Physics,	142000, 	2014
+SQL: insert: done:: 
+
+
+[13]  insert into employee values Johnson,	Billy, 			"Phys Ed",	102000, 	2014
+SQL: insert: done:: 
+
+
+[14]  insert into employee values "Van Gogh",		Vincent, 		Art,		240000, 	2015
+SQL: insert: done:: 
+
+
+[15]  insert into employee values "Van Gogh",		Vincent, 		CS,		245000, 	2015
+SQL: insert: done:: 
+
+
+[16]  insert into employee values "Van Gogh",		"Jim Bob", 		"Phys Ed",	230000, 	2010
+SQL: insert: done:: 
+
+
+[17]  select * from employee 
+
+Table:: employee1000        record: 16
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[2]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[3]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[4]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[5]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[6]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[7]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[8]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+[9]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[10]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[11]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[12]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+[13]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[14]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+[15]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[18]  				
+***ERROR***: command INVALID: 
+
+[19]  make table student fields fname, 			lname, 		major, 				age, 		company
+SQL: make: done:: 
+
+
+[20]  insert into student values Flo, 			Yao, 		CS, 				20, 		Google
+SQL: insert: done:: 
+
+
+[21]  insert into student values Bo, 				Yang, 		CS, 				28,		Microsoft
+SQL: insert: done:: 
+
+
+[22]  insert into student values "Sammuel L.", 		Jackson, 	CS, 				40,		Uber
+SQL: insert: done:: 
+
+
+[23]  insert into student values "Flo", 			"Jackson", 	Math,	 			21,		Google
+SQL: insert: done:: 
+
+
+[24]  insert into student values "Greg", 			"Pearson", 	Physics,			20,		Amazon
+SQL: insert: done:: 
+
+
+[25]  insert into student values "Jim Bob", 			Smith, 		Math,	 			23,		Verizon
+SQL: insert: done:: 
+
+
+[26]  insert into student values Calvin, 			Woo, 		Physics,			22,		Uber
+SQL: insert: done:: 
+
+
+[27]  insert into student values "Anna Grace", 		"Del Rio", 	CS,	 			22,		USAF
+SQL: insert: done:: 
+
+
+[28]  insert into student values "Teresa Mae", 		Gowers, 	Chemistry,			22,		Verizon
+SQL: insert: done:: 
+
+
+[29]  insert into student values Alex,			Smith,		"Gender Studies", 		53,		Amazon
+SQL: insert: done:: 
+
+
+[30]  select * from student
+
+Table:: student1001        record: 10
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+[2]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[3]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+[4]		               Greg           Pearson        Physics        20             Amazon                                                                                                                                                                                                                           
+[5]		               Jim Bob        Smith          Math           23             Verizon                                                                                                                                                                                                                          
+[6]		               Calvin         Woo            Physics        22             Uber                                                                                                                                                                                                                             
+[7]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+[8]		               Teresa Mae     Gowers         Chemistry      22             Verizon                                                                                                                                                                                                                          
+[9]		               Alex           Smith          Gender Studies 53             Amazon                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+
+
+
+
+//****************************************************************************
+
+//		SIMPLE SELECT:
+
+//****************************************************************************
+
+
+
+[31]  select * from student
+
+Table:: student1002        record: 10
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+[2]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[3]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+[4]		               Greg           Pearson        Physics        20             Amazon                                                                                                                                                                                                                           
+[5]		               Jim Bob        Smith          Math           23             Verizon                                                                                                                                                                                                                          
+[6]		               Calvin         Woo            Physics        22             Uber                                                                                                                                                                                                                             
+[7]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+[8]		               Teresa Mae     Gowers         Chemistry      22             Verizon                                                                                                                                                                                                                          
+[9]		               Alex           Smith          Gender Studies 53             Amazon                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+
+
+//------- simple strings -------------------
+
+[32]  select * from student where lname = Jackson
+
+Table:: student1003        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[33]  select * from student where major = CS
+
+Table:: student1004        record: 4
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+[2]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[3]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[34]  select * from student where company = Uber
+
+Table:: student1005        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Calvin         Woo            Physics        22             Uber                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+//----- quoted strings ---------------------
+
+[35]  select * from student where lname = "Del Rio"
+
+Table:: student1006        record: 1
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[36]  select * from student where fname = "Jim Bob"
+
+Table:: student1007        record: 1
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Jim Bob        Smith          Math           23             Verizon                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[37]  select * from student where fname = "Anna Grace"
+
+Table:: student1008        record: 1
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[38]  select * from student where fname = "Teresa Mae"
+
+Table:: student1009        record: 1
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Teresa Mae     Gowers         Chemistry      22             Verizon                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+
+
+//-------- non-existing string ------------------
+
+[39]  select * from student where lname = "Does Not Exist"
+
+Table:: student1010        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+
+
+//****************************************************************************
+
+//		RELATIONAL OPERATORS:
+
+//****************************************************************************
+
+
+
+//.................
+
+//:Greater Than   :
+
+//.................
+
+[40]  select * from student where lname > Yang
+
+Table:: student1011        record: 1
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[41]  select * from student where major > Math
+
+Table:: student1012        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Greg           Pearson        Physics        20             Amazon                                                                                                                                                                                                                           
+[1]		               Calvin         Woo            Physics        22             Uber                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[42]  select * from student where fname > "Sammuel L."
+
+Table:: student1013        record: 1
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Teresa Mae     Gowers         Chemistry      22             Verizon                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[43]  select * from employee where salary > 200000
+
+Table:: employee1014        record: 3
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[1]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+[2]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[44]  select * from employee where dep > Chemistry
+
+Table:: employee1015        record: 9
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[1]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[2]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[3]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[4]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[5]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[6]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[7]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+[8]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[45]  select * from employee where last > Jackson
+
+Table:: employee1016        record: 11
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[1]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[2]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[3]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[4]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[5]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[6]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[7]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+[8]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[9]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+[10]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[46]  select * from employee where first > "Billy Bob"
+
+Table:: employee1017        record: 13
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[2]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[3]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[4]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[5]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[6]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[7]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[8]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+[9]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[10]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[11]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+[12]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+
+
+//. . . . . . . . . . . . . (Greater Than: Non-existing) . . . . . . . . . . . . . . . . . . . . . 
+
+[47]  select * from student where age > 50
+
+Table:: student1018        record: 1
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Alex           Smith          Gender Studies 53             Amazon                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[48]  select * from student where age > 35
+
+Table:: student1019        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Alex           Smith          Gender Studies 53             Amazon                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[49]  select * from student where fname > T
+
+Table:: student1020        record: 1
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Teresa Mae     Gowers         Chemistry      22             Verizon                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[50]  select * from employee where salary > 130000
+
+Table:: employee1021        record: 13
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[1]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[2]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[3]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[4]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[5]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[6]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[7]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[8]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[9]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[10]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[11]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+[12]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[51]  select * from employee where  year > 2009
+
+Table:: employee1022        record: 16
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[2]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[3]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[4]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[5]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[6]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[7]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[8]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+[9]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[10]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[11]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[12]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+[13]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[14]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+[15]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+//. . . . . . . . . . . . . (Greater than: last item) . . . . . . . . . . . . . . . . . .
+
+[52]  select * from student where age  > 53
+
+Table:: student1023        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[53]  select * from student where lname > Yao
+
+Table:: student1024        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[54]  select * from student where fname > "Teresa Mae"
+
+Table:: student1025        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[55]  select * from employee where last > "Van Gogh"
+
+Table:: employee1026        record: 3
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[1]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[2]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[56]  select * from employee where first > Vincent
+
+Table:: employee1027        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[57]  select * from employee where salary > 260000
+
+Table:: employee1028        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+//. . . . . . . . . . . . . (Greater Than: Passed last item) . . . . . . . . . . . . . . . . . . . . . 
+
+[58]  select * from student where age > 54
+
+Table:: student1029        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[59]  select * from student where lname > Zoolander
+
+Table:: student1030        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[60]  select * from employee where last > Zoolaner
+
+Table:: employee1031        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[61]  select * from employee where first > Xu
+
+Table:: employee1032        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+//.................
+
+//:Greater Equal  :
+
+//.................
+
+[62]  select * from student where lname >= Yang
+
+Table:: student1033        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+
+SQL: select: done:: 
+
+
+[63]  select * from student where fname >= "Sammuel L."
+
+Table:: student1034        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Teresa Mae     Gowers         Chemistry      22             Verizon                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[64]  select * from student where age >= 40
+
+Table:: student1035        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Alex           Smith          Gender Studies 53             Amazon                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+//. . . . . .  (Greater Equal non-existing: ) . . . . . . . . . . . 
+
+[65]  select * from employee where last >= Jack
+
+Table:: employee1036        record: 14
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[1]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[2]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[3]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[4]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[5]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[6]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+[7]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[8]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[9]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[10]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+[11]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[12]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+[13]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[66]  select * from employee where first >= Bill
+
+Table:: employee1037        record: 16
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[2]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[3]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[4]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[5]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[6]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[7]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[8]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+[9]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[10]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[11]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[12]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+[13]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[14]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+[15]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[67]  select * from employee where salary >= 235000
+
+Table:: employee1038        record: 2
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[1]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+
+
+//.................
+
+//:Less Than      :
+
+//.................
+
+
+
+
+
+//. . . . . . . . . . . . . (Less Than: Non-existing) . . . . . . . . . . . . . . . . . . . . . 
+
+[68]  select * from student where lname < Jackson
+
+Table:: student1039        record: 1
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[69]  select * from student where major < Math
+
+Table:: student1040        record: 6
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+[2]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[3]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+[4]		               Teresa Mae     Gowers         Chemistry      22             Verizon                                                                                                                                                                                                                          
+[5]		               Alex           Smith          Gender Studies 53             Amazon                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[70]  select * from student where fname < "Jim Bob"
+
+Table:: student1041        record: 7
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+[2]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+[3]		               Greg           Pearson        Physics        20             Amazon                                                                                                                                                                                                                           
+[4]		               Calvin         Woo            Physics        22             Uber                                                                                                                                                                                                                             
+[5]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+[6]		               Alex           Smith          Gender Studies 53             Amazon                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[71]  select * from employee where salary < 200000
+
+Table:: employee1042        record: 12
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[2]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[3]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[4]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[5]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[6]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[7]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+[8]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[9]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[10]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[11]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[72]  select * from employee where dep < CS
+
+Table:: employee1043        record: 1
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[73]  select * from employee where last < Jackson
+
+Table:: employee1044        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[74]  select * from employee where first < "Billy Bob"
+
+Table:: employee1045        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+//. . . . . . . . . . . . . (Less than: first item) . . . . . . . . . . . . . . . . . .
+
+[75]  select * from student where age  < 20
+
+Table:: student1046        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[76]  select * from student where lname < "Del Rio"
+
+Table:: student1047        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[77]  select * from student where fname < Alex
+
+Table:: student1048        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[78]  select * from employee where last < Blow
+
+Table:: employee1049        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[79]  select * from employee where first < Billy
+
+Table:: employee1050        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[80]  select * from employee where salary < 100000
+
+Table:: employee1051        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+
+
+//. . . . . . . . . . . . . (Less Than: before first item) . . . . . . . . . . . . . . . . . . . . . 
+
+
+
+[81]  select * from student where age  < 19
+
+Table:: student1052        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[82]  select * from student where lname < Adams
+
+Table:: student1053        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[83]  select * from student where fname < Adam
+
+Table:: student1054        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[84]  select * from employee where last < Alex
+
+Table:: employee1055        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[85]  select * from employee where first < Avory
+
+Table:: employee1056        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[86]  select * from employee where dep < Alchemy
+
+Table:: employee1057        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+
+
+//.................
+
+//:Less Equal     :
+
+//.................
+
+
+
+[87]  select * from student where lname <= Smith
+
+Table:: student1058        record: 5
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+[2]		               Greg           Pearson        Physics        20             Amazon                                                                                                                                                                                                                           
+[3]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+[4]		               Teresa Mae     Gowers         Chemistry      22             Verizon                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[88]  select * from student where fname <= Greg
+
+Table:: student1059        record: 7
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+[2]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+[3]		               Greg           Pearson        Physics        20             Amazon                                                                                                                                                                                                                           
+[4]		               Calvin         Woo            Physics        22             Uber                                                                                                                                                                                                                             
+[5]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+[6]		               Alex           Smith          Gender Studies 53             Amazon                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[89]  select * from student where age <= 40
+
+Table:: student1060        record: 8
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+[2]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+[3]		               Greg           Pearson        Physics        20             Amazon                                                                                                                                                                                                                           
+[4]		               Jim Bob        Smith          Math           23             Verizon                                                                                                                                                                                                                          
+[5]		               Calvin         Woo            Physics        22             Uber                                                                                                                                                                                                                             
+[6]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+[7]		               Teresa Mae     Gowers         Chemistry      22             Verizon                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+
+
+//. . . . . .  (Less Equal non-existing: ) . . . . . . . . . . . 
+
+[90]  select * from employee where last <= Peach
+
+Table:: employee1061        record: 5
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[2]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[3]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+[4]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[91]  select * from employee where first <= Gary
+
+Table:: employee1062        record: 7
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[1]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[2]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[3]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+[4]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[5]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[6]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[92]  select * from employee where salary <= 23500
+
+Table:: employee1063        record: 14
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[2]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[3]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[4]		               Yao            Jimmy          Math           145000         2014                                                                                                                                                                                                                             
+[5]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[6]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[7]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[8]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+[9]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[10]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[11]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[12]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+[13]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+//****************************************************************************
+
+//		LOGICAL OPERATORS
+
+//****************************************************************************
+
+
+
+
+
+//.................
+
+//:AND            :
+
+//.................
+
+
+
+[93]  select * from student where fname = "Flo" and lname = "Yao"
+
+Table:: student1064        record: 1
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[94]  select * from student where major = "CS" and age < 25
+
+Table:: student1065        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[95]  select * from student where major < Math and age > 25
+
+Table:: student1066        record: 3
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+[1]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[2]		               Alex           Smith          Gender Studies 53             Amazon                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[96]  select * from employee where dep = CS and salary > 150000
+
+Table:: employee1067        record: 2
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[1]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[97]  select * from employee where last = Jackson and year < 2015
+
+Table:: employee1068        record: 1
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[98]  select * from employee where last = Johnson and year >=2014
+
+Table:: employee1069        record: 5
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[1]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[2]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[3]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[4]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+
+
+//.................
+
+//:OR            :
+
+//.................
+
+[99]  select * from student where fname = Flo or lname = Jackson
+
+Table:: student1070        record: 3
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[2]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[100]  select * from student where age >=40  or company = Verizon
+
+Table:: student1071        record: 4
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Jim Bob        Smith          Math           23             Verizon                                                                                                                                                                                                                          
+[2]		               Teresa Mae     Gowers         Chemistry      22             Verizon                                                                                                                                                                                                                          
+[3]		               Alex           Smith          Gender Studies 53             Amazon                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[101]  select * from employee where first = Bo or last = Johnson
+
+Table:: employee1072        record: 7
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Johnson        Jack           HR             150000         2014                                                                                                                                                                                                                             
+[1]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[2]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[3]		               Jackson        Bo             Chemistry      130000         2011                                                                                                                                                                                                                             
+[4]		               Johnson        Mary Ann       Math           165000         2014                                                                                                                                                                                                                             
+[5]		               Johnson        Billy Bob      Physics        142000         2014                                                                                                                                                                                                                             
+[6]		               Johnson        Billy          Phys Ed        102000         2014                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[102]  select * from employee where year >= 2015 or dep = CS
+
+Table:: employee1073        record: 9
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[2]		               Johnson        Jimmy          Chemistry      140000         2018                                                                                                                                                                                                                             
+[3]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[4]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[5]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[6]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[7]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[8]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[103]  select * from employee where year >= 2020 or dep = CompSci
+
+Table:: employee1074        record: 0
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[104]  select * from employee where year < 2010 or dep = CS
+
+Table:: employee1075        record: 4
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[2]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[3]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+
+
+//.................
+
+//:OR AND         :
+
+//.................
+
+[105]  select * from student where fname = Flo or major = CS and age <= 23
+
+Table:: student1076        record: 3
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+[2]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[106]  select * from employee where last = "Van Gogh" or last = Jackson and salary >= 165000
+
+Table:: employee1077        record: 5
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Jackson        Flo            Math           165000         2017                                                                                                                                                                                                                             
+[1]		               Jackson        Billy          Math           170000         2017                                                                                                                                                                                                                             
+[2]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[3]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+[4]		               Van Gogh       Jim Bob        Phys Ed        230000         2010                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[107]  select * from student where lname = Jackson or age < 23 and company > Uber
+
+Table:: student1078        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[108]  select * from student where lname = Jackson or age > 23 and company > Uber
+
+Table:: student1079        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[109]  select * from student where lname = Jackson or age > 73 and company > Uber
+
+Table:: student1080        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[110]  select * from student where lname = "Jackson" or age > 73 and company > Uber
+
+Table:: student1081        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[111]  select * from student where lname = "Solis" or age > 73 and company > Uber
+
+Table:: student1082        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+[112]  select * from student where lname = "Solis" or age > 23 and company > Uber
+
+Table:: student1083        record: 0
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+
+SQL: select: done:: 
+
+
+
+
+
+
+//.................
+
+//:AND OR AND     :
+
+//.................
+
+
+
+[113]  select * from student where age <30 and major=CS or major = Physics and company = Amazon
+
+Table:: student1084        record: 4
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+[2]		               Greg           Pearson        Physics        20             Amazon                                                                                                                                                                                                                           
+[3]		               Anna Grace     Del Rio        CS             22             USAF                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[114]  select * from student where age <=40 and company=Uber or major = CS and company = Google
+
+Table:: student1085        record: 2
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Calvin         Woo            Physics        22             Uber                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[115]  select * from employee where dep = CS and salary >= 160000 or year > 2014 and last = "Van Gogh"
+
+Table:: employee1086        record: 3
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[1]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[2]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[116]  select * from employee where dep = CS and salary >= 160000 or year > 2015 and last = "Van Gogh"
+
+Table:: employee1087        record: 2
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[1]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+
+
+//.................
+
+//:OR AND OR      :
+
+//.................
+
+
+
+[117]  select * from student where lname = Yang or major = CS and age < 23 or company = Google 
+
+Table:: student1088        record: 3
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Flo            Yao            CS             20             Google                                                                                                                                                                                                                           
+[1]		               Bo             Yang           CS             28             Microsoft                                                                                                                                                                                                                        
+[2]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+
+SQL: select: done:: 
+
+
+[118]  select * from student where major = Physics or major = Math and company = Google or lname = Jackson
+
+Table:: student1089        record: 4
+
+rec            del            fname          lname          major          age            company                                                                                                                                                                                                                          
+[0]		               Sammuel L.     Jackson        CS             40             Uber                                                                                                                                                                                                                             
+[1]		               Flo            Jackson        Math           21             Google                                                                                                                                                                                                                           
+[2]		               Greg           Pearson        Physics        20             Amazon                                                                                                                                                                                                                           
+[3]		               Calvin         Woo            Physics        22             Uber                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[119]  select * from employee where dep = CS or year >2014 and year < 2018 or salary >= 240000
+
+Table:: employee1090        record: 6
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[2]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[3]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[4]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[5]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[120]  select * from employee where dep = CS or year >2014 and year < 2018 or salary >= 242000
+
+Table:: employee1091        record: 6
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[2]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[3]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[4]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[5]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+[121]  select * from employee where dep = CS or year >2014 and year < 2018 or salary > 240000
+
+Table:: employee1092        record: 6
+
+rec            del            last           first          dep            salary         year                                                                                                                                                                                                                             
+[0]		               Blow           Joe            CS             100000         2018                                                                                                                                                                                                                             
+[1]		               Blow           JoAnn          Physics        200000         2016                                                                                                                                                                                                                             
+[2]		               Yao            Flo            CS             147000         2012                                                                                                                                                                                                                             
+[3]		               Yang           Bo             CS             160000         2013                                                                                                                                                                                                                             
+[4]		               Van Gogh       Vincent        Art            240000         2015                                                                                                                                                                                                                             
+[5]		               Van Gogh       Vincent        CS             245000         2015                                                                                                                                                                                                                             
+
+SQL: select: done:: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=  =   =   =   =  END BATCH TEST  =  =   =   =   =
+
+
+Press <RETURN> to close this window...
+

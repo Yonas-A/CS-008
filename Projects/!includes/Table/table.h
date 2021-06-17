@@ -82,13 +82,14 @@ public:
     /// \returns the table name for  this table as string
     std::string get_tablename( ) const ;
 
+    /// @brief file has only field lists, or file doesn't have anything
+    /// return false
     /// @returns the value of empty member var
     bool is_empty( ) ;
-    /// \if file has only field lists, or file doesn't have anything
-    /// return false
+
 
     /// \returns true if  current table is in error state  or
-    /// \returns false if current table is not in error state
+    /// false if current table is not in error state
     bool get_error( ) const ;
     // ==============================================================
     // accessors and Modifiers

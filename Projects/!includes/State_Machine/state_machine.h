@@ -1,14 +1,9 @@
 #ifndef STATEMACHINE_H
 #define STATEMACHINE_H
 
-
-class StateMachine
-{
-public:
+class StateMachine {
+   public:
     StateMachine();
-
-
-
 };
 
-#endif // STATEMACHINE_H
+#endif  // STATEMACHINE_H

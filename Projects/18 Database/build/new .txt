@@ -1,0 +1,8 @@
+select * from employee where dep = CS or year >2014 and year < 2018 or salary >= 242000
+Dep cd = year 2014  > or year 2018 > or salary >= 2420000 and 
+
+BEFORE Post fix:  [ dep ]-> [ cs ]-> [ = ]-> [ year ]-> [ 2014 ]-> [ > ]-> [ year ]-> [ 2018 ]-> [ < ]-> [ && ]-> [ OR ]-> [ Salary ]-> [ 240 ]-> [ >= ]-> [ or ]->|||
+
+AFTER Post fix:  [ dep ]-> [ cs ]-> [ = ]-> [ year ]-> [ 2014 ]-> [ > ]-> [ year ]-> [ 2018 ]-> [ < ]-> [ && ]-> [ OR ]-> [ Salary ]-> [ 240 ]-> [ >= ]-> [ or ]->|||
+
+RPN:  [ dep ]-> [ cs ]-> [ = ]-> [ year ]-> [ 2014 ]-> [ > ]-> [ year ]-> [ 2018 ]-> [ < ]-> [ && ]-> [ OR ]-> [ Salary ]-> [ 240 ]-> [ >= ]-> [ or ]->|||

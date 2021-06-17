@@ -1,21 +1,18 @@
 #ifndef OPEN_HASH_H
 #define OPEN_HASH_H
 
-#include <cstdlib>    // Provides size_t
+#include <cstdlib>  // Provides size_t
 #include <iomanip>
 #include <iostream>
 
-using namespace  std;
-
+using namespace std;
 
 template <typename T>
-class open_hash
-{
-public:
-
+class open_hash {
+   public:
     static const std::size_t CAPACITY = 811;
 
-    open_hash( );
+    open_hash();
 
     bool find(int key, T& result) const;
 
@@ -25,15 +22,14 @@ public:
 
     bool remove(int key);
 
-    std::size_t size( ) const;
+    std::size_t size() const;
 
     template <typename U>
-    friend ostream& operator <<(ostream& outs,const open_hash<U>& ME );
+    friend ostream& operator<<(ostream& outs, const open_hash<U>& ME);
 
-    void print_interactive( ) const;
+    void print_interactive() const;
 
-private:
-
+   private:
     static const int NEVER_USED = -1;
 
     static const int PREVIOUSLY_USED = -2;
@@ -50,14 +46,13 @@ private:
 
     void initialize();
     /// initializes the table to NEVER_USED
-    
+
     bool is_vacant(std::size_t index) const;
     /// checks if table at index is available
 
     bool never_used(std::size_t index) const;
 
     std::size_t next_index(std::size_t index) const;
-
 };
 
 ///========================================================
@@ -65,42 +60,37 @@ private:
 ///========================================================
 
 template <typename T>
-open_hash<T>::open_hash( )
-{
+open_hash<T>::open_hash() {
     used = 0;
     initialize();
 }
 
 template <typename T>
-bool open_hash<T>::find(int key, T& result) const
-{
+bool open_hash<T>::find(int key, T& result) const {
     std::size_t index;
 
-    assert( key >= 0 && "find( ), key >= 0" );
+    assert(key >= 0 && "find( ), key >= 0");
 
-    bool found = find_index( key, index);
-    if ( found )
+    bool found = find_index(key, index);
+    if (found)
         result = _data[index];
     return found;
 }
 
 template <typename T>
-void open_hash<T>::insert(const T& entry)
-{
+void open_hash<T>::insert(const T& entry) {
     assert(entry._key >= 0 && "insert( ), _key >= 0");
 
     std::size_t index;
 
-    bool already_present = find_index(entry._key,  index);
+    bool already_present = find_index(entry._key, index);
 
     /// If the key not found, then find the location for the new entry.
-    if (! already_present )
-    {
-        assert( size( ) < CAPACITY && "insert( ), size < CAPACITY");
-        index = hash( entry._key );
-        while ( !is_vacant( index ))
-        {
-            index = next_index( index );
+    if (!already_present) {
+        assert(size() < CAPACITY && "insert( ), size < CAPACITY");
+        index = hash(entry._key);
+        while (!is_vacant(index)) {
+            index = next_index(index);
         }
         ++used;
     }
@@ -109,26 +99,23 @@ void open_hash<T>::insert(const T& entry)
 }
 
 template <typename T>
-bool open_hash<T>::is_present(int key) const
-{
-    assert( key >= 0 && "is_present( ), key >= 0" );
+bool open_hash<T>::is_present(int key) const {
+    assert(key >= 0 && "is_present( ), key >= 0");
 
     std::size_t index;
 
-    bool found = find_index( key, index );
+    bool found = find_index(key, index);
     return found;
 }
 
 template <typename T>
-bool open_hash<T>::remove( int key )
-{
-    assert( key >= 0 && "remove(), key >= 0");
+bool open_hash<T>::remove(int key) {
+    assert(key >= 0 && "remove(), key >= 0");
 
-    std::size_t index;   /// Spot where _data[index].key == key
+    std::size_t index;  /// Spot where _data[index].key == key
 
-    bool found = find_index( key, index);
-    if ( found )
-    {
+    bool found = find_index(key, index);
+    if (found) {
         _data[index]._key = PREVIOUSLY_USED;
         /// remove the record and reduce used by 1.
         --used;
@@ -137,41 +124,34 @@ bool open_hash<T>::remove( int key )
 }
 
 template <typename T>
-inline std::size_t open_hash<T>::size( ) const
-{
+inline std::size_t open_hash<T>::size() const {
     return used;
 }
 
-template<typename U>
-std::ostream& operator <<(ostream& outs, const open_hash<U>& me )
-{
-    for( size_t i = 0; i < me.CAPACITY; ++i)
-    {
+template <typename U>
+std::ostream& operator<<(ostream& outs, const open_hash<U>& me) {
+    for (size_t i = 0; i < me.CAPACITY; ++i) {
         cout << "[" << setw(3) << setfill('0')
-             << i << "] " <<  me._data[i] << endl;
+             << i << "] " << me._data[i] << endl;
     }
     return outs;
 }
 
 template <typename T>
-void open_hash<T>::print_interactive( )  const
-{
-    for( size_t i = 0; i < CAPACITY; ++i)
-    {
-        cout << "[" << setw(3) << setfill('0')<< i << "] ";
+void open_hash<T>::print_interactive() const {
+    for (size_t i = 0; i < CAPACITY; ++i) {
+        cout << "[" << setw(3) << setfill('0') << i << "] ";
 
-        if( _data[i]._key == -1)
+        if (_data[i]._key == -1)
             cout << " " << endl;
-        else if( _data[i]._key == -2)
+        else if (_data[i]._key == -2)
             cout << "- - - - - -" << endl;
-        else
-        {
-            cout <<  _data[i] << "(" << setw(3) << setfill('0')
+        else {
+            cout << _data[i] << "(" << setw(3) << setfill('0')
                  << hash(_data[i]._key) << ")";
 
-            if( hash(_data[i]._key) != i)
-            {
-                cout << " *" ;
+            if (hash(_data[i]._key) != i) {
+                cout << " *";
             }
             cout << endl;
         }
@@ -183,15 +163,12 @@ void open_hash<T>::print_interactive( )  const
 /// =======================================================
 
 template <typename T>
-bool open_hash<T>::find_index(int key, std::size_t& i) const
-{
+bool open_hash<T>::find_index(int key, std::size_t& i) const {
     std::size_t count = 0;
     /// Number of entries that have been examined
 
-    i = hash( key );
-    while(( count < CAPACITY ) &&   ( _data[i]._key != NEVER_USED )
-                    && ( _data[i]._key != key ))
-    {
+    i = hash(key);
+    while ((count < CAPACITY) && (_data[i]._key != NEVER_USED) && (_data[i]._key != key)) {
         ++count;
         i = next_index(i);
     }
@@ -200,41 +177,34 @@ bool open_hash<T>::find_index(int key, std::size_t& i) const
 }
 
 template <typename T>
-inline std::size_t open_hash<T>::hash(int key) const
-{
-    return ( key % CAPACITY );
+inline std::size_t open_hash<T>::hash(int key) const {
+    return (key % CAPACITY);
 }
 
 template <typename T>
-void open_hash<T>::initialize()
-{
-    for( size_t i = 0; i < CAPACITY; i++)
-    {
+void open_hash<T>::initialize() {
+    for (size_t i = 0; i < CAPACITY; i++) {
         _data[i] = NEVER_USED;
     }
 }
 
 template <typename T>
-inline bool open_hash<T>::is_vacant(std::size_t index) const
-{
-    return ( _data[index]._key == NEVER_USED )
-            || ( _data[index]._key == PREVIOUSLY_USED );
+inline bool open_hash<T>::is_vacant(std::size_t index) const {
+    return (_data[index]._key == NEVER_USED) || (_data[index]._key == PREVIOUSLY_USED);
 }
 
 template <typename T>
-inline bool open_hash<T>::never_used(std::size_t index) const
-{
-    assert( index >= 0 && "never_used( ), index >= 0" );
+inline bool open_hash<T>::never_used(std::size_t index) const {
+    assert(index >= 0 && "never_used( ), index >= 0");
 
-    return ( _data[index]._key == NEVER_USED );
+    return (_data[index]._key == NEVER_USED);
 }
 
 template <typename T>
-inline std::size_t open_hash<T>::next_index(std::size_t index) const
-{
-    assert( index >= 0 && "next_index( ), index >= 0" );
+inline std::size_t open_hash<T>::next_index(std::size_t index) const {
+    assert(index >= 0 && "next_index( ), index >= 0");
 
-    return ( ( index + 1 ) % CAPACITY );
+    return ((index + 1) % CAPACITY);
 }
 
-#endif // OPEN_HASH_H
+#endif  // OPEN_HASH_H
