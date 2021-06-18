@@ -55,3 +55,9 @@ The files and folders structure consists of [!includes](./Projects/!includes/) d
 - [Union and Intersection with Maps](./Projects/!includes/Union_n_Intersection)
 
 ## Installation/Setup
+
+Clone or download this project. Then run each numbered directories as separate workspaces.
+
+_NOTE_
+
+On some IDEs it may require to use `.cpp` instead of `.h` when including paths to some libraries that have both a `source` and `header` files
