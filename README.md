@@ -6,7 +6,7 @@ All the files and projects for CS 8 class with Professor Sassan Barkeshli at Pas
 
 ### Directory structure
 
-The files and folders structure consists of and [!includes](./Projects/!includes/) directory as the main library and numbered directories for small projects.
+The files and folders structure consists of [!includes](./Projects/!includes/) directory as the main library and numbered directories for small projects.
 
 - ### [!includes Directory](./Projects/!includes/)
 
@@ -16,7 +16,7 @@ The files and folders structure consists of and [!includes](./Projects/!includes
 
   This directories that start with numbers hold test files and projects derived from the classes in the [!includes](./Projects/!includes/) directory. The `source` directory under this directory hold the test main.cpp and sample test files. Some `source` directories also contain a `.pro` file that holds all the dependencies needed for that project.This `.pro` file was automatically created with [`Qt Creator`](https://www.qt.io/product) IDE
 
-  The numbered directories also holds an `output` directory that holds the sample outputs for these tests. The doc directory holds the work report for the main data structure classes. The resource or build directories hold the resources used with that project to run the test files such as `.txt` and `.bin` files
+  The numbered directories also holds an `output` directory that holds the sample outputs for these tests. The `report` directory holds the work report for the main data structure classes. The `resource` or `build` directories hold the resources used with that project to run the test files such as `.txt` and `.bin` files
 
 ### Language
 
